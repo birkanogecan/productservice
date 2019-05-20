@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ProductService.MongoConsumer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

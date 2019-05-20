@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ProductService.ESConsumer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
