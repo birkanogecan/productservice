@@ -27,7 +27,6 @@ namespace ProductService.ESConsumer
             connection.ConnectAsync().Wait();
             UserCredentials userCredentials = new UserCredentials("admin", "changeit");
             PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create().DoNotResolveLinkTos().StartFromCurrent();
-            //var _result = connection.CreatePersistentSubscriptionAsync("test-stream", "agroup", settings, userCredentials);
             connection.SubscribeToStreamAsync("product-stream", true, EventAppeared, SubscriptionDropped, userCredentials);
             Console.WriteLine("ES Consumer Listening...");
             Console.ReadLine();

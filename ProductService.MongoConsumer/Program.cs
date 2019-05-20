@@ -26,7 +26,6 @@ namespace ProductService.MongoConsumer
             connection.ConnectAsync().Wait();
             UserCredentials userCredentials = new UserCredentials("admin", "changeit");
             PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create().DoNotResolveLinkTos().StartFromCurrent();
-            //var _result = connection.CreatePersistentSubscriptionAsync("test-stream", "agroup", settings, userCredentials);
             connection.SubscribeToStreamAsync("product-stream", true, EventAppeared, SubscriptionDropped, userCredentials);
             Console.WriteLine("Mongo Consumer Listening...");
             Console.ReadLine();
